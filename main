@@ -1,0 +1,18 @@
+local knife = "v_WhiteReaver"-- use dex and go to ReplicatedStorage > Viewmodels and pick one
+
+if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("v_CT Knife", true) and game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("v_T Knife", true) then
+        game:GetService("ReplicatedStorage")["Viewmodels"]["v_CT Knife"]:Destroy()
+        game:GetService("ReplicatedStorage")["Viewmodels"]["v_T Knife"]:Destroy()
+    else
+        -- reset ct, t knives
+        Reset_DefaultKnives()
+        warn("Not found CT, T Knives")
+        game:GetService("Players").LocalPlayer:Kick("Not found CT, T Knives. Rejoin.")
+    end
+    task.wait()
+    local Clone1 = game:GetService("ReplicatedStorage")["Viewmodels"][knife]:Clone()
+    Clone1.Parent = game:GetService("ReplicatedStorage")["Viewmodels"]
+    task.wait()
+    game:GetService("ReplicatedStorage")["Viewmodels"][knife].Name = "v_CT Knife"
+    game:GetService("ReplicatedStorage")["Viewmodels"][knife].Name = "v_T Knife"
+	-- By sum dude#2988

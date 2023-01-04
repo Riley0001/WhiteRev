@@ -15,4 +15,4 @@ if game:GetService("ReplicatedStorage")["Viewmodels"]:FindFirstChild("v_CT Knife
     task.wait()
     game:GetService("ReplicatedStorage")["Viewmodels"][knife].Name = "v_CT Knife"
     game:GetService("ReplicatedStorage")["Viewmodels"][knife].Name = "v_T Knife"
-	-- By sum dude#2988
+	-- By rmg#3285
